@@ -8,14 +8,23 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<String> profileImages = [
     "images/gtr.png",
+    "images/rr.png",
     "images/lambo11.png",
     "images/maclaren.png",
     "images/supra.png",
-    "images/rr.png",
+
     "images/ford.png",
     "images/bmw.png",
   ];
-
+  List<String> posts = [
+    "images/gtrpost.png",
+  "images/1000091181_x16_fast.jpg",
+    "images/lambo12.jpeg",
+    "images/mcl.png",
+    "images/supraEX.png",
+    "images/fordGT.png",
+    "images/bmwVb.png",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,43 +67,80 @@ class _HomePageState extends State<HomePage> {
                                 TextStyle(fontSize: 12, color: Colors.black87),
                           )
                         ],
-                      )
-                  ),
+                      )),
                 ),
-              )
-          ),
+              )),
           Divider(height: 2),
 
           Column(
               children: List.generate(
                   7,
                   (index) => Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           //HEADER POST
                           Row(children: [
                             Container(
-                            padding: EdgeInsets.all(10),
-                            child : CircleAvatar(
-                              radius: 19,
-                                backgroundImage: AssetImage("images/insta_bg.png"),
-                                child:CircleAvatar(
-                                  radius: 18,
-                                  backgroundImage: AssetImage(profileImages[index]),)
-                                ),
-
+                              padding: EdgeInsets.all(10),
+                              child: CircleAvatar(
+                                  radius: 19,
+                                  backgroundImage:
+                                      AssetImage("images/insta_bg.png"),
+                                  child: CircleAvatar(
+                                    radius: 18,
+                                    backgroundImage:
+                                        AssetImage(profileImages[index]),
+                                  )),
                             ),
                             Text("Profile Name"),
                             Spacer(),
-                            IconButton(onPressed: (){}, icon: Icon(Icons.more_vert)),
-                         ]
-                        )
-                      ],
-                  )
-              )
-          )
+                            IconButton(
+                                onPressed: () {}, icon: Icon(Icons.more_vert)),
+                          ]),
+                          //IMAGE POST
+                          Image.asset(posts[index]),
+                          //FOOTER POST
+
+                          Row(children: [
+                            IconButton(
+                              icon: Icon(Icons.favorite_border),
+                              onPressed: () {},
+                            ),
+                            IconButton(
+                              icon: Icon(Icons.comment_outlined),
+                              onPressed: () {},
+                            ),
+                            IconButton(
+                              icon: Icon(Icons.send_outlined),
+                              onPressed: () {},
+                            ),
+                            Spacer(),
+                            IconButton(
+                              icon: Icon(Icons.bookmark_border_outlined),
+                              onPressed: () {},
+                            )
+                          ]),
+                          Container(
+                            padding: EdgeInsets.all(15),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                RichText(
+                                  text: TextSpan(
+                                      style: TextStyle(color: Colors.black),
+                                      children: [
+                                    TextSpan(text: "Liked by "),
+                                    TextSpan(text: "Profile name",
+                                        style: TextStyle(fontWeight: FontWeight.bold)),
+                                  ]),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      )))
         ],
-        )
-      ),
+      )),
     );
   }
 }
