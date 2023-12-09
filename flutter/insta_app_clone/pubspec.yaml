@@ -73,6 +73,13 @@ flutter:
     - images/rr.png
     - images/ford.png
     - images/bmw.png
+    - images/mcl.png
+    - images/gtrpost.png
+    - images/supraEX.png
+    - images/fordGT.png
+    - images/lamboC.png
+    - images/bmwVb.png
+    - images/1000091181_x16_fast.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

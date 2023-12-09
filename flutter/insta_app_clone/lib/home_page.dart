@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                             radius: 25,
                             backgroundImage: AssetImage("images/insta_bg.png"),
                             child: CircleAvatar(
-                                radius: 21,
+                                radius: 22,
                                 backgroundImage:
                                     AssetImage(profileImages[index])),
                           ),
@@ -75,10 +75,17 @@ class _HomePageState extends State<HomePage> {
                             Container(
                             padding: EdgeInsets.all(10),
                             child : CircleAvatar(
-                              radius: 28,
-                                backgroundImage: AssetImage(profileImages[index]),
+                              radius: 19,
+                                backgroundImage: AssetImage("images/insta_bg.png"),
+                                child:CircleAvatar(
+                                  radius: 18,
+                                  backgroundImage: AssetImage(profileImages[index]),)
                                 ),
-                            )
+
+                            ),
+                            Text("Profile Name"),
+                            Spacer(),
+                            IconButton(onPressed: (){}, icon: Icon(Icons.more_vert)),
                          ]
                         )
                       ],
