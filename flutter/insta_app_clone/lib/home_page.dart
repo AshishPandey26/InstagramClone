@@ -12,19 +12,26 @@ class _HomePageState extends State<HomePage> {
     "images/lambo11.png",
     "images/maclaren.png",
     "images/supra.png",
-
     "images/ford.png",
     "images/bmw.png",
   ];
   List<String> posts = [
     "images/gtrpost.png",
     "images/1000091181_x16_fast.jpg",
-    "images/lambo12.jpeg",
+    "images/lamboopst.jpg",
     "images/mcl.png",
     "images/supraEX.png",
-
     "images/fordGT.png",
     "images/bmwVb.png",
+  ];
+  List<String> nameStory = [
+    "GTR",
+    "Roll Royce",
+    "Lamborghini",
+    "Mclaren",
+    "Supraa",
+    "ford",
+    "BMW",
   ];
   @override
   Widget build(BuildContext context) {
@@ -63,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            "Profile Name",
+                            nameStory[index],
                             style:
                                 TextStyle(fontSize: 12, color: Colors.black87),
                           )
@@ -77,7 +84,7 @@ class _HomePageState extends State<HomePage> {
               children: List.generate(
                   7,
                   (index) => Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           //HEADER POST
                           Row(children: [
@@ -93,7 +100,8 @@ class _HomePageState extends State<HomePage> {
                                         AssetImage(profileImages[index]),
                                   )),
                             ),
-                            Text("Profile Name"),
+                            // Text("Profile Name"),
+                            Text(nameStory[index]),
                             Spacer(),
                             IconButton(
                                 onPressed: () {}, icon: Icon(Icons.more_vert)),
@@ -130,10 +138,37 @@ class _HomePageState extends State<HomePage> {
                                   text: TextSpan(
                                       style: TextStyle(color: Colors.black),
                                       children: [
-                                    TextSpan(text: "Liked by "),
-                                    TextSpan(text: "Profile name",
-                                        style: TextStyle(fontWeight: FontWeight.bold)),
-                                  ]),
+                                        TextSpan(text: "Liked by "),
+                                        TextSpan(
+                                            text: "You",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                        TextSpan(text: " and"),
+                                        TextSpan(
+                                            text: " others",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold))
+                                      ]),
+                                ),
+                                RichText(
+                                  text: TextSpan(
+                                      style: TextStyle(color: Colors.black),
+                                      children: [
+                                        TextSpan(
+                                            text: nameStory[index],
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                        TextSpan(
+                                            text:
+                                                "  This is the best of our and is One Of A Kind, and the best sounding and flaming car"),
+                                      ]
+                                  ),
+                                ),
+                                Text(
+                                  "View all 1250 comments",
+                                  style: TextStyle(
+                                    color: Colors.black45,
+                                  )
                                 )
                               ],
                             ),
