@@ -32,7 +32,11 @@ git clone https://github.com/ashishpandey26/InstagramClone.git
 flutter pub get
 
 # Run the app
+
+## Make sure to download the latest FLutter SDK and set it up
 flutter run
+
+
 </pre>
 
 
@@ -42,7 +46,6 @@ flutter run
 <img width="322" height="689" alt="image" src="https://github.com/user-attachments/assets/0494e081-57f5-4ff7-addd-3316d4bc9104" />
   <img width="317" height="672" alt="image" src="https://github.com/user-attachments/assets/16d53531-014e-41fa-838e-0db69f547ca7" />
 
-<i>(You can add screenshots of the home and search page here)</i>
 </p>
 
 <hr>
